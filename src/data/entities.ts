@@ -1,0 +1,120 @@
+import type {
+  EntityConnection,
+  EntityNode,
+} from '../types/entity'
+
+export const entityNodes: EntityNode[] = [
+  {
+    id: 'ENTITY-001',
+    label: 'Entity Alpha',
+    platform: 'Primary Entity',
+    type: 'Primary Entity',
+    status: 'Active',
+    health: 100,
+    x: 50,
+    y: 50,
+  },
+  {
+    id: 'NODE-001',
+    label: 'Brand Knowledge Hub',
+    platform: 'WordPress',
+    type: 'Owned Property',
+    status: 'Active',
+    health: 100,
+    x: 50,
+    y: 12,
+  },
+  {
+    id: 'NODE-002',
+    label: 'Industry Insights',
+    platform: 'Medium',
+    type: 'Web 2.0',
+    status: 'Active',
+    health: 96,
+    x: 18,
+    y: 30,
+  },
+  {
+    id: 'NODE-003',
+    label: 'Professional Profile',
+    platform: 'LinkedIn',
+    type: 'Social',
+    status: 'Active',
+    health: 100,
+    x: 82,
+    y: 30,
+  },
+  {
+    id: 'NODE-004',
+    label: 'Executive Commentary',
+    platform: 'Blogger',
+    type: 'Web 2.0',
+    status: 'Review',
+    health: 82,
+    x: 18,
+    y: 72,
+  },
+  {
+    id: 'NODE-005',
+    label: 'Company Social Profile',
+    platform: 'X',
+    type: 'Social',
+    status: 'Active',
+    health: 94,
+    x: 82,
+    y: 72,
+  },
+  {
+    id: 'NODE-006',
+    label: 'Leadership Article',
+    platform: 'WordPress',
+    type: 'Authority Article',
+    status: 'Active',
+    health: 98,
+    x: 50,
+    y: 88,
+  },
+]
+
+export const entityConnections: EntityConnection[] = [
+  {
+    source: 'ENTITY-001',
+    target: 'NODE-001',
+    relation: 'Owned By',
+  },
+  {
+    source: 'ENTITY-001',
+    target: 'NODE-002',
+    relation: 'Entity Association',
+  },
+  {
+    source: 'ENTITY-001',
+    target: 'NODE-003',
+    relation: 'Social Identity',
+  },
+  {
+    source: 'ENTITY-001',
+    target: 'NODE-004',
+    relation: 'Supporting Property',
+  },
+  {
+    source: 'ENTITY-001',
+    target: 'NODE-005',
+    relation: 'Social Identity',
+  },
+  {
+    source: 'ENTITY-001',
+    target: 'NODE-006',
+    relation: 'Authority Content',
+  },
+  {
+    source: 'NODE-002',
+    target: 'NODE-006',
+    relation: 'Contextual Link',
+  },
+  {
+    source: 'NODE-004',
+    target: 'NODE-006',
+    relation: 'Supporting Link',
+  },
+]
